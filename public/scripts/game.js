@@ -7,6 +7,9 @@ var level = 1;
 var waiting = false;
 var delay = determineDelayTime();
 var difficulty = window.localStorage.getItem("difficulty");
+if (difficulty == undefined || difficulty == null){
+  difficulty = "Easy";
+}
 
 
 $(window).on("beforeunload", function(){
