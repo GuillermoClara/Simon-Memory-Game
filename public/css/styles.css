@@ -1,0 +1,351 @@
+body{
+  background-color: #011F3F;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+.title, h2{
+  margin-top: 3%;
+  color: white;
+}
+
+.tap{
+  display: none;
+}
+
+.btn{
+  width: 200px;
+  height: 200px;
+  margin: 2%;
+  border-radius: 10%;
+  border: solid black 12px;
+  display: inline-block;
+}
+
+.container{
+  margin: 5%;
+}
+
+.pressed{
+  border-color: white;
+  box-shadow: 0 0 20px white;
+  background-color: gray;
+}
+
+.green{
+  background-color: green;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+.red{
+  background-color: red;
+}
+
+.blue{
+  background-color: blue;
+}
+
+
+.options-cont{
+  display: flex;
+  justify-content: space-between;
+}
+
+.option{
+  background-color: #DCE2BD;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 5%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: solid black 10px;
+  word-wrap: break-word;
+  display: block;
+}
+
+.options-cont .option{
+  width: 20%;
+}
+
+.footer-disclaimer{
+  margin-top: 2%;
+}
+
+
+
+#game-options{
+  padding-bottom: 2%;
+}
+
+.lb-button{
+  margin-bottom: 0;
+}
+
+.lb-submit-div{
+  background-color: #DCE2BD;
+  width: 40%;
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  align-items: center;
+  position: relative;
+}
+
+.lb-submit-div input{
+  background-color: inherit;
+  display: block;
+  padding: 0 1rem;
+  text-align: center;
+  margin: auto;
+  font-size: 1.2rem;
+  font-family: "Press Start 2P";
+  margin-bottom: 1rem;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  border-bottom: solid black 2px;
+}
+
+.lb-submit-div button{
+  background-color: black;
+  color:white;
+  font-family: "Press Start 2P";
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+
+.close-submit{
+  padding-top: 0;
+  padding-bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+}
+
+/* LEADERBOARD STYLES */
+
+.categories-list{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: auto;
+}
+
+.cat-btn{
+  outline: none;
+  background-color: #DCE2BD;
+  font-family: "Press Start 2P";
+  width: 25%;
+  padding: 1rem 0;
+  border: solid black;
+  border-width: 7px;
+  cursor: pointer;
+}
+
+.participants{
+  width: 60%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.participant{
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.participant, .gen-info, .user-info > *{
+  flex-shrink: 1;
+}
+
+.gen-info, .user-info {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.participant-info-text{
+  margin: auto;
+}
+
+
+.position{
+  vertical-align: middle;
+  margin-left: 10%;
+}
+
+.profile{
+  margin-right: 20%;
+}
+
+.profile-img{
+  max-width: 75px;
+  max-height: 75px;
+  border-radius: 200%;
+}
+
+.name{
+  text-align: left;
+  word-wrap: break-word;
+  margin-right: 20%;
+  min-width: 0;
+}
+
+
+.max-score{
+  width: 20%;
+  text-align: right;
+  margin-right: 10%;
+  align-content: flex-end;
+}
+
+/* OPTION STYLES */
+
+.selected-option{
+  background-color: #ECA6A6;
+  color: white;
+  border-color: white;
+}
+
+.option p{
+  font-size: 1.2rem;
+}
+
+.back{
+  background-color: #DCE2BD;
+  width: 12%;
+  margin: auto;
+  position: absolute;
+  left: 5%;
+}
+
+.container-display{
+  width: 80%;
+  margin: auto;
+}
+
+.container-display .btn{
+  width: 100px;
+  height: 100px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden{
+  display: none;
+}
+
+
+@media (max-width: 900px){
+
+  .btn{
+    width: 35%;
+    height: 150px;
+  }
+
+  .option, .lb-submit-div{
+    width: 90%;
+  }
+
+  .title{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 3rem;
+  }
+
+  .back{
+    width: 15%;
+  }
+
+  .container-display .btn{
+    width: 80px;
+    height: 80px;
+  }
+
+  .container-display{
+    width: 100%;
+  }
+
+  .options-cont{
+    flex-direction: column;
+  }
+
+  .options-cont .option{
+    width: 80%;
+  }
+
+  h2{
+    width: 40%;
+    margin: -50px auto 0 auto;
+    font-size: 1rem;
+  }
+
+  .container{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .categories-list{
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .cat-btn{
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+  }
+
+
+}
+
+@media screen and (max-width: 500px){
+  .title{
+    font-size: 1.5rem;
+  }
+
+  .tap{
+    display: block;
+  }
+
+  .game-title{
+    display: none;
+  }
+
+  .back{
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 60%;
+  }
+
+
+
+  .cat-btn{
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .participants{
+    width: 85%;
+  }
+
+}

@@ -1,0 +1,64 @@
+<html lang="en" dir="ltr">
+
+  <%- include("partials/header"); -%>
+
+  <body>
+    <section id="game-area">
+      <h1 class="title game-title">Press any key to start</h1>
+      <h1 class="title tap">Tap me to start!</h1>
+      <div class="container">
+        <form id="game-submission" action="" method="post">
+          <div class="upper">
+            <div class="green btn" type="button"></div>
+            <div class="red btn" type="button"></div>
+          </div>
+
+          <div class="lower">
+            <div class="yellow btn" type="button"></div>
+            <div class="blue btn" type="button"></div>
+          </div>
+
+          <input type="hidden" id="chosenColor" name="chosenColor" value="red">
+        </form>
+
+
+      </div>
+    </section>
+
+    <section id="game-options">
+
+        <a href="#game-area" class="option hidden play-again">
+          <p>Play again</p>
+        </a>
+
+        <a href="/" class="option">
+          <p>Return to Menu</p>
+        </a>
+
+        <div class="option hidden lb-button">
+          <p>Add to Leaderboard</p>
+        </div>
+
+
+      <div class="lb-submit-div hidden">
+        <button type="button" name="button" class="close-submit">X</button>
+        <form class="lb-form" action="/game" method="post">
+
+          <input type="text" name="username" value="" placeholder="Enter your name:" autocomplete="off" required>
+
+          <!-- Session Identifiers (Dont modify!) -->
+          <input type="hidden" id="gameId" name="id" value="<%=sessionId%>">
+          <input type="hidden" id="gameToken" name="token" value="<%=token%>">
+
+          <button type="submit" name="button">Submit</button>
+        </form>
+      </div>
+
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/scripts/game.js"></script>
+  </body>
+</html>

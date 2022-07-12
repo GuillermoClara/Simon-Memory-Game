@@ -1,0 +1,83 @@
+<html lang="en" dir="ltr">
+
+  <%- include("partials/header") -%>
+
+  <body>
+    <h1 class="title">Leaderboard</h1>
+    <div class="container-display">
+      <div class="leaderboard-div">
+        <div class="categories-list">
+
+          <% switch(selected) {
+
+          case "Easy": %>
+
+              <a class="cat-btn selected-option">Easy</a>
+              <a href="/leaderboard/Medium" class="cat-btn">Medium</a>
+              <a href="/leaderboard/Hard" class="cat-btn">Hard</a>
+
+          <% break;
+             case "Medium": %>
+
+
+             <a href="/leaderboard/Easy" class="cat-btn">Easy</a>
+             <a class="cat-btn selected-option">Medium</a>
+             <a href="/leaderboard/Hard" class="cat-btn">Hard</a>
+
+          <% break;
+          case "Hard": %>
+
+          <a href="/leaderboard/Easy" class="cat-btn">Easy</a>
+          <a href="/leaderboard/Medium" class="cat-btn">Medium</a>
+          <a class="cat-btn selected-option">Hard</a>
+
+          <% } %>
+
+        </div>
+
+        <div class="participants">
+
+          <% for(let i=0;i<users.length;i++) { %>
+          <div class="participant">
+
+            <div class="gen-info">
+
+              <div class="position">
+                <div class="participant-info-text">
+                  <p> <%=(i+1)%> </p>
+                </div>
+              </div>
+
+              <div class="profile">
+                <img class="profile-img" src="/assets/default-icon.png" alt="Profile">
+              </div>
+
+            </div>
+
+            <div class="user-info">
+
+              <div class="name">
+                <div class="participant-info-text">
+                  <p> <%=users[i].name%> </p>
+                </div>
+              </div>
+
+              <div class="max-score">
+                <div class="participant-info-text">
+                  <p> <%=users[i].score%> pts </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <%} %>
+
+        </div>
+
+        <a href="/" class="option"> <p>Home</p> </a>
+
+      </div>
+    </div>
+  </body>
+</html>
