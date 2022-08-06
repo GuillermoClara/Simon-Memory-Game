@@ -3,7 +3,7 @@ Web application that implements the famous Simon game
 Test link: https://polar-retreat-58772.herokuapp.com/
 ### Tech Stack
 #### Front end
-HTML, CSS (responsive with media queries)
+HTML (in form of EJS), CSS (responsive with media queries)
 Javascript (Used for event handling, and information display e.g. next buttons, score)
 
 #### Back end (Node JS)
